@@ -19,3 +19,8 @@ Here are the Python3 packages you may want to know more:
 #### Web-scraping packages:
 - requests
 - beautifulsoup4
+
+## Projects included here:
+1. Greeting
+2. Segmentation and Clustering of Neighbourhoods in Toronto, Canada
+(This [LINK](https://nbviewer.jupyter.org/github/6x16/Coursera_Capstone/blob/master/Segmentation_Clustering_Toronto.ipynb) shows interactive elements.)
