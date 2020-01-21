@@ -13,7 +13,7 @@ _Now, after acquiring the skills and the tools to use location data to explore a
 6. <a href="#6-conclusion">Conclusion</a>  
 ***********************************
 ## 1. Introduction/Business Problem
-Although we have the information of neighbourhoods in Manhattan, for the urban planners and government, they may want to know more about how other boroughs are like and how the KMeans-clustered neighbourhoods are actually close to each other, which will relate to their ability to coorporate with each other for boosting tourisms and the ease of future planning.
+Although we have the information of neighbourhoods in Manhattan, for **the urban planners and government who are my audience**, they may want to know more about how other boroughs are like and how the KMeans-clustered neighbourhoods are actually close to each other, which will relate to their ability to coorporate with each other for boosting tourisms and the ease of future planning.
 
 Here, we will continue the work of clustering and segmentation of New York mentioned in our course, but we will investigate the other boroughs as well. Once we obtain thier geographical data, we will conduct K-Means clustering neighbourhoods-wise and DBSCAN, which is a common spatial clustering method, on each resulting cluster. For only the prove-of-concept, we will choose **The Bronx** as our another target borough since it has similar estimated population with **Manhattan** (Reference: [Wikipedia](https://en.wikipedia.org/wiki/Boroughs_of_New_York_City)).
 Hence, we have two questions here:
