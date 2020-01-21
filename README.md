@@ -19,6 +19,7 @@ Here are the Python3 packages you may want to know more:
 #### Web-scraping packages:
 - requests
 - beautifulsoup4
+- json
 
 ## Projects included here:
 1. Greeting
