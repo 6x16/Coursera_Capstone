@@ -53,14 +53,61 @@ The following links may be referred for detailed methodology illustration:
 ### 3.1 K-mean clustering
 FourSquare API was packaged into a self-defined function (i.e. getNearbyVenues(), please refer to Jupyter Notebook for detailed codes) and it was used to retrieve the venue data from all neighbourhoods in both Manhattan and Bronx. Once the dataframe of venues in each borough was obtained, a built-in functions of _Pandas_, _get_dummies_, was used to convert the categorical table into pivot talbe-like tabular format with relative frequencies (i.e. grouped_clustering). 
 
-K-mean clustering parameter (i.e. number of clusters) was set as **5**, similar to previous tutorial, and a _scikit-learn_ function, _KMeans(n_clusters=kclusters, random_state=0).fit(grouped_clustering)_, was used. The output for each neighborhood was the corresponding cluster label, which indicated which group should that neighborhood belonged to based on its containing venues compared with other similar neighborhoods.
+K-mean clustering parameter was set as 5 (**i.e. number of clusters = 5**), similar to previous tutorial, and a _scikit-learn_ function, _KMeans(n_clusters=kclusters, random_state=0).fit(grouped_clustering)_, was used. The output for each neighborhood was the corresponding cluster label, which indicated which group should that neighborhood belonged to based on its containing venues compared with other similar neighborhoods.
 
 ### 3.2 DBSCAN clustering
 Similar to K-mean clustering method, FourSquare data was used in here. Yet, for spatial clustering, the results returned illustrated how the neighborhoods in a borough were close to or far away from each other and how they were grouped by spatial distance. Here, a _scikit-learn.cluster_ function, _DBSCAN(eps, min_samples).fit(data_df)_, was used. The corresponding parameters were **eps=0.5** and **min_samples=3** based on technical trials previously; also, _data_df_ contained the latitude and longitude values of all neighborhoods in either borough. 
 
-The output for each neighborhood was the corresponding cluster label, which indicated which group should that neighborhood belonged to based on the distance between other different neighborhoods and label **0** was used to identify noises in all both clustering results of Manhattan and Bronx.
+The output for each neighborhood was the corresponding cluster label, which indicated which group should that neighborhood belonged to based on the distance between other different neighborhoods and **label 0** was used to identify noises in all both clustering results of Manhattan and Bronx.
 ## 4. Results
+In this project, we were only looking at 2 boroughs, which were Manhattan and Bronx, for clustering comparison. The entire New York city borough map was shown here to reveal the details of geographical location and description of New York city.
+<img src='https://github.com/6x16/Coursera_Capstone/blob/master/Results_finalproject/maps/newyork_map.jpg' height=500 width=800>
+### 4.1 K-mean clustering
+#### Manhattan
+Briefly, under K-mean clustering, 5 clusters have been formed for both Manhattan and Bronx, individually. Here are the neighborhoods results for Manhattan:
+- [Cluster 1: 17](https://github.com/6x16/Coursera_Capstone/blob/master/Results_finalproject/manhattan_kmean_cluster1.docx)
+- [Cluster 2: 11](https://github.com/6x16/Coursera_Capstone/blob/master/Results_finalproject/manhattan_kmean_cluster2.docx)
+- [Cluster 3: 1](https://github.com/6x16/Coursera_Capstone/blob/master/Results_finalproject/manhattan_kmean_cluster3.docx)
+- [Cluster 4: 1](https://github.com/6x16/Coursera_Capstone/blob/master/Results_finalproject/manhattan_kmean_cluster4.docx)
+- [Cluster 5: 10](https://github.com/6x16/Coursera_Capstone/blob/master/Results_finalproject/manhattan_kmean_cluster5.docx)
+
+Below is the map visualization of K-mean clustering for Manhattan:
+<img src='https://github.com/6x16/Coursera_Capstone/blob/master/Results_finalproject/maps/manhattan_kmean.jpg' height=500 width=800>
+
+#### The Bronx
+Similarly, neighborhoods in Bronx were also been clustered and clusters were formed based on categorical venues frequencies. Here are the neighborhoods results for Bronx: 
+- [Cluster 1: 4](https://github.com/6x16/Coursera_Capstone/blob/master/Results_finalproject/bronx_kmean_cluster1.docx)
+- [Cluster 2: 39](https://github.com/6x16/Coursera_Capstone/blob/master/Results_finalproject/bronx_kmean_cluster2.docx)
+- [Cluster 3: 7](https://github.com/6x16/Coursera_Capstone/blob/master/Results_finalproject/bronx_kmean_cluster3.docx)
+- [Cluster 4: 1](https://github.com/6x16/Coursera_Capstone/blob/master/Results_finalproject/bronx_kmean_cluster4.docx)
+- [Cluster 5: 1](https://github.com/6x16/Coursera_Capstone/blob/master/Results_finalproject/bronx_kmean_cluster5.docx)
+
+Below is the map visualization of K-mean clustering for Bronx:
+<img src='https://github.com/6x16/Coursera_Capstone/blob/master/Results_finalproject/maps/bronx_kmean.jpg' height=500 width=700>
+
+### 4.2 DBSCAN clustering
+#### Manhattan
+For DBSCAN clustering, Manhattan has returned only **2 formal clusters and 3 noise neighborhoods** by defined parameters (in order to refer the full data, please click into the link of each cluster count number to access the respective document):
+- [Cluster 1: 32](https://github.com/6x16/Coursera_Capstone/blob/master/Results_finalproject/manhattan_dbscan_cluster1.docx)
+- [Cluster 2: 5](https://github.com/6x16/Coursera_Capstone/blob/master/Results_finalproject/manhattan_dbscan_cluster2.docx)
+- [Noises: 3](https://github.com/6x16/Coursera_Capstone/blob/master/Results_finalproject/manhattan_dbscan_noises.docx)
+
+Below is the map visualization of DBSCAN clustering for Manhattan:
+<img src='https://github.com/6x16/Coursera_Capstone/blob/master/Results_finalproject/maps/manhattan_dbscan_label.jpg' height=500 width=500>
+
+#### Bronx
+Likewise, Bronx has been performed clustering and returned **3 formal clusters and 5 noise neighborhoods** by defined parameters:
+- [Cluster 1: 22](https://github.com/6x16/Coursera_Capstone/blob/master/Results_finalproject/bronx_dbscan_cluster1.docx)
+- [Cluster 2: 22](https://github.com/6x16/Coursera_Capstone/blob/master/Results_finalproject/bronx_dbscan_cluster2.docx)
+- [Cluster 3: 3](https://github.com/6x16/Coursera_Capstone/blob/master/Results_finalproject/bronx_dbscan_cluster3.docx)
+- [Noises: 5](https://github.com/6x16/Coursera_Capstone/blob/master/Results_finalproject/bronx_dbscan_noises.docx)
+
+Below is the map visualization of DBSCAN clustering for Manhattan:
+<img src='https://github.com/6x16/Coursera_Capstone/blob/master/Results_finalproject/maps/bronx_dbscan_label.jpg' height=500 width=600>
 
 ## 5. Discussion
+#### Observations:
+
+#### Recommendations/Suggestions:
 
 ## 6. Conclusion
