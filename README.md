@@ -25,3 +25,5 @@ Here are the Python3 packages you may want to know more:
 1. Greeting
 2. Segmentation and Clustering of Neighbourhoods in Toronto, Canada
 (This [LINK](https://nbviewer.jupyter.org/github/6x16/Coursera_Capstone/blob/master/Segmentation_Clustering_Toronto.ipynb) shows interactive elements.)
+3. New York's Borough Investigation
+4. Results data for New York's Borough Investigation
